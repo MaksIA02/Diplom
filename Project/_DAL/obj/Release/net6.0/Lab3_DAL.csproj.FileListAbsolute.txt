@@ -1,0 +1,12 @@
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\bin\Release\net6.0\Lab3_DAL.deps.json
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\bin\Release\net6.0\Lab3_DAL.dll
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\bin\Release\net6.0\Lab3_DAL.pdb
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\obj\Release\net6.0\Lab3_DAL.csproj.AssemblyReference.cache
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\obj\Release\net6.0\Lab3_DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\obj\Release\net6.0\Lab3_DAL.AssemblyInfoInputs.cache
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\obj\Release\net6.0\Lab3_DAL.AssemblyInfo.cs
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\obj\Release\net6.0\Lab3_DAL.csproj.CoreCompileInputs.cache
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\obj\Release\net6.0\Lab3_DAL.dll
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\obj\Release\net6.0\refint\Lab3_DAL.dll
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\obj\Release\net6.0\Lab3_DAL.pdb
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_DAL\obj\Release\net6.0\ref\Lab3_DAL.dll

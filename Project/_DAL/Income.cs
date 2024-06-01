@@ -1,0 +1,11 @@
+﻿
+namespace DAL
+{
+    public class Income : BaseEntity<Guid>
+    {
+        public decimal Amount { get; set; }
+        public Card? Card { get; set; }
+		public string? Currency { get; set; }
+		public DateOnly Date { get; set; }
+	}
+}

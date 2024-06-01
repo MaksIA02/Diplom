@@ -1,0 +1,86 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+	ViewData["Title"] = "Cards";
+}
+@if (SignInManager.IsSignedIn(User))
+{
+	<div class="container p-3">
+		<div class="row pt-4">
+			<div class="col-6">
+				<h1 class="text-dark">@Localizer["Cards List"]</h1>
+			</div>
+			<div class="col-6 text-end">
+				<a asp-controller="Card" asp-action="Create" class="btn btn-dark text-white">
+					@Localizer["Create New Card"]
+				</a>
+				<a asp-controller="Card" asp-action="Exchange" class="btn btn-dark text-white">
+					@Localizer["Make Transfer"]
+				</a>
+			</div>
+
+		</div>
+		<br>
+
+		<table class="table table-bordered table-striped" style="width:100%">
+			<thead>
+				<tr>
+					<th>
+						@Localizer["Cards Name"]
+					</th>
+					<th>
+						@Localizer["Cards Amount"]
+					</th>
+					<th>
+						@Localizer["Goal"]
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var obj in Model)
+				{
+					@if (@obj.IdentityUser == User.Identity.Name)
+					{
+						<tr>
+							<td width="12%">
+								@obj.Name
+							</td>
+							<td width="12%">
+								@obj.Amount @obj.Currency
+							</td>
+							<td width="12%">
+								@obj.Goal @obj.Currency <br>
+								@obj.GoalDate
+							</td>
+							<td width="63%">
+								<div>
+									<a asp-controller="Card" asp-action="ChangeAmount" asp-route-name="@obj.Name" class="btn btn-dark text-white" style="text-decoration:none">
+										<i class=""></i>@Localizer["Change Amount"]
+									</a>
+									<a asp-controller="Card" asp-action="Statistic" asp-route-name="@obj.Name" class="btn btn-dark text-white" style="text-decoration:none">
+										<i class=""></i>@Localizer["Statistic"]
+									</a>
+									<a asp-controller="Card" asp-action="SetGoal" asp-route-name="@obj.Name" class="btn btn-dark text-white" style="text-decoration:none">
+										<i class=""></i>@Localizer["SetGoal"]
+									</a>
+									<a asp-controller="Card" asp-action="Delete" asp-route-name="@obj.Name" class="btn btn-danger" style="text-decoration:none">
+										<i class="bi bi-trash-fill"></i>@Localizer["Delete"]
+									</a>
+								</div>
+							</td>
+						</tr>
+					}
+				}
+			</tbody>
+		</table>
+
+	</div>
+}
+else
+{
+	<h1 class="text-dark">@Localizer["Please Login"]</h1>
+}

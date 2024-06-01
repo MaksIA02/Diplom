@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Телеграм-бот";
+}
+
+<h1 class="text-center my-4">@ViewData["Title"]</h1>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ваш ID користувача:</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="@Model" id="userId" readonly>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" onclick="copyToClipboard()">Копіювати</button>
+                        </div>
+                    </div>
+                    <a href="https://t.me/Quick_Pocket_Bot" class="btn btn-dark text-white" target="_blank">Перейти до бота</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function copyToClipboard() {
+        var copyText = document.getElementById("userId");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+        document.execCommand("copy");
+        alert("ID користувача скопійовано: " + copyText.value);
+    }
+</script>

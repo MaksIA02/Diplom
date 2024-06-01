@@ -1,0 +1,17 @@
+﻿@model DebtModel
+@inject IViewLocalizer Localizer
+<form method="post" asp-action="DeletePOST">
+	<input asp-for="Name" hidden>
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-dark">@Localizer["Delete"]</h2>
+			<hr />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Name">@Localizer["Name"]</label>
+			<input asp-for="Name" disabled class="form-control"/>
+		</div>
+		<button type="submit" class="btn btn-danger" style="width:150px  ">@Localizer["Delete"]</button>
+		<a asp-controller="Debt" asp-action="Index" class="btn btn-secondary" style="width:150px">@Localizer["Back to List"]</a>
+	</div>
+</form>

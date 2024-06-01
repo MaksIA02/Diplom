@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Project_DAL.Repositories.ArticleRepository">
+    <Position X="12.75" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\ArticleRepositoryь.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Project_DAL.Repositories.CardRepository">
+    <Position X="12.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\CardRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Project_DAL.Repositories.DebtRepository">
+    <Position X="15" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\DebtRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Project_DAL.Repositories.ExpenseRepository">
+    <Position X="12.75" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\ExpenseRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Project_DAL.Repositories.GoalRepository">
+    <Position X="12.75" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\GoalRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Project_DAL.Repositories.IncomeRepository">
+    <Position X="15" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\IncomeRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Project_DAL.Repositories.ReceiptRepository">
+    <Position X="15" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\ReceiptRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Project_DAL.Repositories.TransferRepository">
+    <Position X="15" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\TransferRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DAL.ApplicationContext">
+    <Position X="1.25" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAIAQAAAAAAAAAAAQAIEAAAQAAAAQAAAAABIAA=</HashCode>
+      <FileName>ApplicationContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Article">
+    <Position X="5.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAQSACAAAAAAgAAAAAAAAACA=</HashCode>
+      <FileName>Article.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.BaseEntity&lt;TKey&gt;">
+    <Position X="5.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Card">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAgAAAAAAAAQSACAAAQAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project_DAL.Debt">
+    <Position X="7.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAWACAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Debt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Expense">
+    <Position X="4" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAACACAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Expense.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project_DAL.GenericRepository&lt;TKey, TEntity&gt;">
+    <Position X="13.75" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAggAAAAAAAAAAAAAAKAAAAAEBAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>GenericRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Project_DAL.Goal">
+    <Position X="5.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAASAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Goal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Income">
+    <Position X="2.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAACACAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Income.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project_DAL.IoC_DAL">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IoC_DAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Receipt">
+    <Position X="4" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgACAAAAAAAASACAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Receipt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Transfer">
+    <Position X="7.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAASAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transfer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.UnitOfWork">
+    <Position X="3.25" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIQAsAIACgQAAAAAAAAAQAIAAAYQAACAQQAABABIAA=</HashCode>
+      <FileName>UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Project_DAL.Repositories.IArticleRepository" Collapsed="true">
+    <Position X="9.25" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\IArticleRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Project_DAL.Repositories.ICardRepository" Collapsed="true">
+    <Position X="9.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\ICardRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Project_DAL.Repositories.IDebtRepository" Collapsed="true">
+    <Position X="9.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\IDebtRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Project_DAL.Repositories.IExpenseRepository" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\IExpenseRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Project_DAL.Repositories.IGoalRepository" Collapsed="true">
+    <Position X="9.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\IGoalRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Project_DAL.Repositories.IIncomeRepository" Collapsed="true">
+    <Position X="9.25" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\IIncomeRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Project_DAL.Repositories.IReceiptRepository" Collapsed="true">
+    <Position X="9.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\IReceiptRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Project_DAL.Repositories.ITransferRepository" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\ITransferRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DAL.IRepository&lt;TKey, TEntity&gt;">
+    <Position X="11.25" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAAAAAAAAAAAAAAAAAAAAEBAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Project_DAL.IUnitOfWork">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAIAIAAAAAAAAAAAAAQAIAAAAQAAAAQAAAAABIAA=</HashCode>
+      <FileName>IUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

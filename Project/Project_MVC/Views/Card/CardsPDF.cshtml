@@ -1,0 +1,73 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+	Layout = "_LayoutNoMenu";
+}
+@{
+	ViewData["Title"] = "Cards";
+}
+@if (SignInManager.IsSignedIn(User))
+{
+	<div class="container p-3">
+		<div class="row pt-4">
+			<div class="col-6">
+				<h1 class="text-dark">@Localizer["Cards List"]</h1>
+			</div>
+			<div class="col-6 text-end">
+				<button id="saveAsPdfButton" class="btn btn-dark text-white">Зберегти PDF</button>
+
+				<script>
+					document.getElementById('saveAsPdfButton').addEventListener('click', function () {
+						window.print();
+					});
+				</script>
+			</div>
+
+		</div>
+		<br>
+
+		<table class="table table-bordered table-striped" style="width:100%">
+			<thead>
+				<tr>
+					<th>
+						@Localizer["Cards Name"]
+					</th>
+					<th>
+						@Localizer["Cards Amount"]
+					</th>
+					<th>
+						@Localizer["Goal"]
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var obj in Model)
+				{
+					@if (@obj.IdentityUser == User.Identity.Name)
+					{
+						<tr>
+							<td width="33%">
+								@obj.Name
+							</td>
+							<td width="33%">
+								@obj.Amount @obj.Currency
+							</td>
+							<td width="33%">
+								@obj.Goal @obj.Currency <br>
+								@obj.GoalDate
+							</td>
+						</tr>
+					}
+				}
+			</tbody>
+		</table>
+
+	</div>
+}
+else
+{
+	<h1 class="text-dark">@Localizer["Please Login"]</h1>
+}

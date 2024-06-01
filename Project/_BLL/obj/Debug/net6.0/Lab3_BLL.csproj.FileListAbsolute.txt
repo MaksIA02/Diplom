@@ -1,0 +1,15 @@
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\bin\Debug\net6.0\Lab3_BLL.deps.json
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\bin\Debug\net6.0\Lab3_BLL.dll
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\bin\Debug\net6.0\Lab3_BLL.pdb
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\bin\Debug\net6.0\Lab3_DAL.dll
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\bin\Debug\net6.0\Lab3_DAL.pdb
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\obj\Debug\net6.0\Lab3_BLL.csproj.AssemblyReference.cache
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\obj\Debug\net6.0\Lab3_BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\obj\Debug\net6.0\Lab3_BLL.AssemblyInfoInputs.cache
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\obj\Debug\net6.0\Lab3_BLL.AssemblyInfo.cs
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\obj\Debug\net6.0\Lab3_BLL.csproj.CoreCompileInputs.cache
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\obj\Debug\net6.0\Lab3_BLL.csproj.CopyComplete
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\obj\Debug\net6.0\Lab3_BLL.dll
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\obj\Debug\net6.0\refint\Lab3_BLL.dll
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\obj\Debug\net6.0\Lab3_BLL.pdb
+C:\Users\VsemPK\source\repos\Lab3_DAL\Lab3_BLL\obj\Debug\net6.0\ref\Lab3_BLL.dll

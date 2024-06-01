@@ -1,0 +1,27 @@
+﻿@model Statistic
+@inject IViewLocalizer Localizer
+@{
+	ViewData["Title"] = "Statistic";
+}
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-dark">@Localizer["Statistic"]</h2>
+			<hr />
+		</div>
+		<div class="mb-3">
+			<label asp-for="CardName">Назва картки</label>
+			<input asp-for="CardName" class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="ArticleName">Назва статті</label>
+			<input asp-for="ArticleName" class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="AllIncome">Всього прибутку/видатків</label>
+			<input asp-for="AllIncome" disabled class="form-control" />
+		</div>
+		<button type="submit" class="btn btn-dark text-white" style="width:150px">Розрахувати</button>
+		<a asp-controller="Article" asp-action="Index" class="btn btn-secondary" style="width:150px">@Localizer["Back to List"]</a>
+	</div>
+</form>

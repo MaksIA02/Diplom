@@ -1,0 +1,93 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using System.IO
+@using System.Drawing
+@using System.Drawing.Imaging
+@inject IViewLocalizer Localizer
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+	ViewData["Title"] = "Debts";
+}
+@if (SignInManager.IsSignedIn(User))
+{
+	<div class="container p-3">
+		<div class="row pt-4">
+			<div class="col-6">
+				<h1 class="text-dark">Чеки</h1>
+			</div>
+			<div class="col-6 text-end">
+				<a asp-controller="Receipt" asp-action="Create" class="btn btn-dark text-white">
+					@Localizer["Create"]
+				</a>
+			</div>
+
+		</div>
+		<br>
+
+
+		<table class="table table-bordered table-striped" style="width:100%">
+			<thead>
+				<tr>
+					<th>
+						@Localizer["Name"]
+					</th>
+					<th>
+						@Localizer["Amount"]
+					</th>
+					<th>
+						Примітки
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var obj in Model)
+				{
+					@if (@obj.IdentityUser == User.Identity.Name)
+					{
+						<tr>
+							<td width="15%">
+								@obj.Name
+							</td>
+							<td width="15%">
+								@obj.Amount @obj.Currency
+							</td>
+							<td width="15%">
+								@obj.Description
+							</td>
+							<td width="40%">
+								@{
+									if (obj.Photo!=null)
+									{
+									string base64Image;
+									using (var ms = new MemoryStream(obj.Photo))
+									{
+										var image = Image.FromStream(ms);
+										using (var ms2 = new MemoryStream())
+										{
+											image.Save(ms2, ImageFormat.Png); // Або інший формат зображення
+											base64Image = Convert.ToBase64String(ms2.ToArray());
+										}
+									}
+										<img src="data:image/png;base64,@base64Image" alt="Photo" style="max-width: 400px; max-height: 600px;" />
+									}
+								}
+							</td>
+							<td width="15%">
+								<div>
+									<a asp-controller="Receipt" asp-action="Delete" asp-route-name="@obj.Name" class="btn btn-danger" style="text-decoration:none">
+										<i class="bi bi-trash-fill"></i> @Localizer["Delete"]
+									</a>
+								</div>
+							</td>
+
+						</tr>
+					}
+				}
+			</tbody>
+		</table>
+	</div>
+}
+else
+{
+	<h1 class="text-dark">@Localizer["Please Login"]</h1>
+}

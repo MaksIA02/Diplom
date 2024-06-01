@@ -1,0 +1,27 @@
+﻿@model ExchangeTransfer
+@inject IViewLocalizer Localizer
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-dark">@Localizer["Exchange"]</h2>
+			<hr />
+		</div>
+		<div class="mb-3">
+			<label asp-for="CardName1">Картка з якої ви хочите перевести</label>
+			<input asp-for="CardName1" class="form-control" />
+			<span asp-validation-for="CardName1" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="CardName2">Картка на яку ви хочите перевести</label>
+			<input asp-for="CardName2" class="form-control" />
+			<span asp-validation-for="CardName2" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Amount">Сума</label>
+			<input asp-for="Amount" class="form-control" type="number"/>
+			<span asp-validation-for="Amount" class="text-danger" ></span>
+		</div>
+		<button type="submit" class="btn btn-dark text-white" style="width:150px">@Localizer["Save"]</button>
+		<a asp-controller="Card" asp-action="Cards" class="btn btn-secondary" style="width:150px">@Localizer["Back to List"]</a>
+	</div>
+</form>

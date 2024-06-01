@@ -1,0 +1,120 @@
+﻿@inject IViewLocalizer Localizer
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Project_MVC.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3 fixed-top">
+            <div class="container-fluid">
+                <h5><a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">Pocket</a></h5>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <h5><a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">@Localizer["Home"]</a></h5>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <h5>
+                                <a class="nav-link text-white dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                   asp-area="" asp-controller="Card" asp-action="Cards">@Localizer["Cards"]</a>
+                            </h5>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a asp-controller="Card" asp-action="Create" class="dropdown-item text-dark">
+                                    @Localizer["Create New Card"]
+                                </a>
+                                <a asp-controller="Card" asp-action="CardsPDF" class="dropdown-item text-dark">
+                                    Таблиця для PDF
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <h5>
+                                <a class="nav-link text-white dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                   asp-area="" asp-controller="Article" asp-action="Index">@Localizer["Articles"]</a>
+                            </h5>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a asp-controller="Article" asp-action="Create" class="dropdown-item text-dark">
+                                    @Localizer["Create New Article"]
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <h5>
+                                <a class="nav-link text-white dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                   asp-area="" asp-controller="Debt" asp-action="Index">@Localizer["Debts"]</a>
+                            </h5>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a asp-controller="Debt" asp-action="Create" class="dropdown-item text-dark">
+                                    @Localizer["Create"]
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <h5>
+                                <a class="nav-link text-white dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                   asp-area="" asp-controller="Receipt" asp-action="Index">@Localizer["Receipts"]</a>
+                            </h5>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a asp-controller="Receipt" asp-action="Create" class="dropdown-item text-dark">
+                                    @Localizer["Create"]
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <h5>
+                                <a class="nav-link text-white dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                   asp-area="" asp-controller="Card" asp-action="GraphStatistic">@Localizer["Statistic"]</a>
+                            </h5>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a asp-controller="Card" asp-action="GraphStatistic" class="dropdown-item text-dark">
+                                    @Localizer["Income chart"]
+                                </a>
+                                <a asp-controller="Card" asp-action="ExpenseStatistic" class="dropdown-item text-dark">
+                                    @Localizer["Chart of expenses"]
+                                </a>
+                                <a asp-controller="Article" asp-action="ArticleStatistic" class="dropdown-item text-dark">
+                                    @Localizer["Chart of articles"]
+                                </a>
+                                <a asp-controller="Debt" asp-action="DebtStatistic" class="dropdown-item text-dark">
+                                    @Localizer["Debt chart"]
+                                </a>
+                                <a asp-controller="Receipt" asp-action="ReceiptStatistic" class="dropdown-item text-dark">
+                                    @Localizer["Receipt chart"]
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial"></partial>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" style="width: 100%; max-height: 100%; margin-top: 6%;">
+        <main role="main" class="pb-3" style="width: 100%">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-white bg-dark">
+        <div class="container">
+            &copy; 2024 - Pocket - <a asp-controller="Home" asp-action="Telegram" class="text-white">Telegram Bot</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

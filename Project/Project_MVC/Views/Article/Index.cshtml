@@ -1,0 +1,85 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject IViewLocalizer Localizer
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+	ViewData["Title"] = "Articles";
+}
+@if (SignInManager.IsSignedIn(User))
+{
+	<div class="container p-3">
+		<div class="row pt-4">
+			<div class="col-6">
+				<h1 class="text-dark">@Localizer["Articles List"]</h1>
+			</div>
+			<div class="col-6 text-end">
+				<a asp-controller="Article" asp-action="Create" class="btn btn-dark text-white">
+					@Localizer["Create New Article"]
+				</a>
+				<a asp-controller="Article" asp-action="UseArticle" class="btn btn-dark text-white">
+					@Localizer["Use Article"]
+				</a>
+				<a asp-controller="Article" asp-action="Statistic" class="btn btn-dark text-white">
+					@Localizer["Statistic"]
+				</a>
+			</div>
+
+		</div>
+		<br>
+
+
+		<table class="table table-bordered table-striped" style="width:100%">
+			<thead>
+				<tr>
+					<th>
+						@Localizer["Name"]
+					</th>
+					<th>
+						@Localizer["Amount"]
+					</th>
+					<th>
+						@Localizer["Limit"]
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var obj in Model)
+				{
+					@if (@obj.IdentityUser == User.Identity.Name)
+					{
+						<tr>
+							<td width="20%">
+								@obj.Name
+							</td>
+							<td width="15%">
+								@obj.Amount @obj.Currency
+							</td>
+							<td width="15%">
+								@obj.LimitAmount <br>
+								@obj.LimitDate
+							</td>
+							<td width="50%">
+								<div>
+									<a asp-controller="Article" asp-action="ChangeAmount" asp-route-name="@obj.Name" class="btn btn-dark text-white" style="text-decoration:none">
+										<i class=""></i> @Localizer["Change Amount"]
+									</a>
+									<a asp-controller="Article" asp-action="SetLimit" asp-route-name="@obj.Name" class="btn btn-dark text-white" style="text-decoration:none">
+										<i class=""></i>@Localizer["Set Limit"]
+									</a>
+									<a asp-controller="Article" asp-action="Delete" asp-route-name="@obj.Name" class="btn btn-danger" style="text-decoration:none">
+										<i class="bi bi-trash-fill"></i> @Localizer["Delete"]
+									</a>
+								</div>
+							</td>
+
+						</tr>
+					}
+				}
+			</tbody>
+		</table>
+	</div>
+}
+else
+{
+	<h1 class="text-dark">@Localizer["Please Login"]</h1>
+}
